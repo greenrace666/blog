@@ -12,10 +12,20 @@ export async function readOne<T extends z.ZodType>({
   slug: string;
   frontmatterSchema: T;
 }) {
-  const raw = await fs.readFile(
-    path.join(process.cwd(), 'content', directory, `${slug}.html`),
-    'utf-8'
-  );
+  // Try HTML first, fallback to MD
+  let raw;
+  try {
+    raw = await fs.readFile(
+      path.join(process.cwd(), 'content', directory, `${slug}.html`),
+      'utf-8'
+    );
+  } catch (e) {
+    raw = await fs.readFile(
+      path.join(process.cwd(), 'content', directory, `${slug}.md`),
+      'utf-8'
+    );
+  }
+  
   const { data: frontmatter, content } = matter(raw);
   
   // Validate frontmatter
@@ -36,16 +46,20 @@ export async function readAll<T extends z.ZodType>({
 }) {
   const dirPath = path.join(process.cwd(), 'content', directory);
   const files = await fs.readdir(dirPath);
-  const htmlFiles = files.filter(file => path.extname(file) === '.html');
+  
+  // Get both HTML and MD files
+  const contentFiles = files.filter(file => 
+    path.extname(file) === '.html' || path.extname(file) === '.md'
+  );
 
   const posts = await Promise.all(
-    htmlFiles.map(async (file) => {
+    contentFiles.map(async (file) => {
       const raw = await fs.readFile(path.join(dirPath, file), 'utf-8');
       const { data: frontmatter } = matter(raw);
       const validatedFrontmatter = frontmatterSchema.parse(frontmatter);
       
       return {
-        slug: path.basename(file, '.html'),
+        slug: path.basename(file, path.extname(file)),
         frontmatter: validatedFrontmatter
       };
     })
