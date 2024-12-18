@@ -1,13 +1,13 @@
 ---
 external: false
-title: "Accurate All-Atom Stucture Prediction In Seconds"
+title: "Accurate All-Atom Structure Prediction In Seconds"
 description: "Chai1 on Modal H100"
-date: 2024-12-18
+date: 2024-12-17
 ---
 
 # Accurate All-Atom Structure Prediction In Seconds
 
-December 16, 2024
+December 17, 2024
 
 Pretty sure you must have heard of the news!
 
@@ -53,7 +53,7 @@ I was running into some issues with running the code and opened a [PR](https://g
 
 I've got a 1000 residue protein in under a minute!
 
-Move around this structure , it's 3D 👇
+Move around this structure, it's 3D 👇
 
 <div id="viewport" style="width:100%; height:400px;"></div>
 

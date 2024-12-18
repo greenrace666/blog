@@ -23,28 +23,21 @@ export const get = async () => {
   baseUrl = baseUrl.replace(/\/+$/g, "");
 
   const rssItems = sortedPosts.map(({ frontmatter, slug }) => {
+    const pubDate = new Date(frontmatter.date);
     if (frontmatter.external) {
-      const title = frontmatter.title;
-      const pubDate = frontmatter.date;
-      const link = frontmatter.url;
-
       return {
-        title,
-        pubDate,
-        link,
+        title: frontmatter.title,
+        pubDate: pubDate,
+        link: frontmatter.url,
+        description: frontmatter.description || ''
       };
     }
 
-    const title = frontmatter.title;
-    const pubDate = frontmatter.date;
-    const description = frontmatter.description;
-    const link = `${baseUrl}/blog/${slug}`;
-
     return {
-      title,
-      pubDate,
-      description,
-      link,
+      title: frontmatter.title,
+      pubDate: pubDate,
+      link: `${baseUrl}/blog/${slug}`,
+      description: frontmatter.description || ''
     };
   });
 
