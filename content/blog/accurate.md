@@ -5,10 +5,6 @@ description: "Chai1 on Modal H100"
 date: 2024-12-17
 ---
 
-# Accurate All-Atom Structure Prediction In Seconds
-
-December 17, 2024
-
 Pretty sure you must have heard of the news!
 
 <blockquote class="twitter-tweet" data-dnt="true" align="center">
@@ -51,13 +47,15 @@ I was running into some issues with running the code and opened a [PR](https://g
 
 [https://github.com/greenrace666/chai1modal](https://github.com/greenrace666/chai1modal)
 
+<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 60px; padding-top: 60px;"><a href="https://github.com/greenrace666/chai1modal" data-iframely-url="//iframely.net/1gZVw0y"></a></div></div><script async src="//iframely.net/embed.js"></script>
+
 I've got a 1000 residue protein in under a minute!
 
 Move around this structure, it's 3D 👇
 
 <div id="viewport" style="width:100%; height:400px;"></div>
 
-<script src="https://unpkg.com/ngl@2.0.0-dev.37/dist/ngl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ngl@latest/dist/ngl.js"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
