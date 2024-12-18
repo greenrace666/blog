@@ -33,7 +33,7 @@ export const get = async () => {
       title,
       description,
       link,
-      pubDate: new Date(frontmatter.date)
+      pubDate: frontmatter.date
     };
   });
 
