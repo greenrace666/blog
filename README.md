@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # blog3
 =======
+=======
+>>>>>>> c8f7594 (123)
 # Blogster
 
 Theme: **sleek**
@@ -51,4 +54,7 @@ Thanks to other templates that inspired this theme.
 ## License
 
 MIT © [Dinesh Pandiyan](https://github.com/flexdinesh)
+<<<<<<< HEAD
+>>>>>>> c8f7594 (123)
+=======
 >>>>>>> c8f7594 (123)
