@@ -2,7 +2,7 @@
 external: false
 title: "Accurate All-Atom Stucture Prediction In Seconds"
 description: "Chai1 on Modal H100"
-date: 2024-12-18
+date: 2024-12-17
 ---
 
 # Accurate All-Atom Structure Prediction In Seconds
