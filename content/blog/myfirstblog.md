@@ -24,9 +24,11 @@ If you wish to know more regarding me professionally, visit my website: [nikilkr
 
 Apart from the above interests, I also sometimes spend time in journalling, travel, drawing. Here is one I made:
 
-![my drawing](/public/images/draw.avif)
+![my drawing](/images/draw.avif)
 
-Here is the youtube video
+This is an image of saitama , the main character in One Punch Man anime - comedy,action,fights - the perfect blend!
+
+Here is the youtube playlsit:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=Zslxs3XqgKJsiIcW&list=PLwLSw1_eDZl2XdtLhB9NG2Ch050jWFm9G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
